@@ -29,6 +29,7 @@ h2 {
 }
 
 /******************************/
+
 .gradient-text-animation {
   --colorA: #d6009a;
   --colorB: #9750dd;
@@ -60,6 +61,37 @@ h2 {
   }
 }
 /******************************/
+.gradient-card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+
+  width: 100%;
+}
+.column-1 {
+  grid-column: 1 / 3;
+}
+.column-2 {
+  grid-column: 3 / 5;
+}
+.column-3 {
+  grid-column: 5 / 7;
+}
+.column-4 {
+  grid-column: 1 / 4;
+}
+.column-5 {
+  grid-column: 4 / 7;
+}
+.column-1,
+.column-2,
+.column-3,
+.column-4,
+.column-5 {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  flex: 1 1;
+}
 .gradient-border-card {
   position: relative;
   padding: 40px;
@@ -70,7 +102,7 @@ h2 {
   box-shadow: 0 0 0 1px transparent, 0 2px 4px transparent,
     0 12px 24px transparent;
   cursor: pointer;
-  height: 100%;
+  height: 15rem;
   z-index: 1;
 }
 @keyframes shimmer {
@@ -974,6 +1006,86 @@ button {
     margin-top: 2rem;
   }
 }
+@media (max-width: 768px) {
+  .gradient-card-container {
+    grid-template-columns: 1fr;
+    width: 25rem;
+    font-size: 0.875rem;
+  }
+  .column-1 {
+    grid-column: 1 / 2;
+  }
+  .column-2 {
+    grid-column: 1 / 2;
+  }
+  .column-3 {
+    grid-column: 1 / 2;
+  }
+  .column-4 {
+    grid-column: 1 / 2;
+  }
+  .column-5 {
+    grid-column: 1 / 2;
+  }
+  .container {
+    place-items: center;
+  }
+}
+/* @media screen and (max-width: 1810px) {
+  .gradient-card-container {
+    font-size: 0.8rem;
+  }
+  .button-text {
+    font-size: 0.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .gradient-card-container {
+    font-size: 0.5rem;
+  }
+  .button-text {
+    font-size: 0.3rem;
+  }
+  h2 {
+    font-size: 0.7rem;
+  }
+  .glowing-wrapper-button div {
+    font-size: 0.2rem;
+  }
+} */
+@media screen and (max-width: 992px) {
+  .gradient-card-container {
+    grid-template-columns: 1fr;
+    width: 25rem;
+    font-size: 0.875rem;
+  }
+  .column-1 {
+    grid-column: 1 / 2;
+    font-size: 0.875rem;
+  }
+  .column-2 {
+    grid-column: 1 / 2;
+    font-size: 0.875rem;
+  }
+  .column-3 {
+    grid-column: 1 / 2;
+    font-size: 0.875rem;
+  }
+  .column-4 {
+    grid-column: 1 / 2;
+    font-size: 0.875rem;
+  }
+  .column-5 {
+    grid-column: 1 / 2;
+    font-size: 0.875rem;
+  }
+  .container {
+    place-items: center;
+  }
+}
 /* .spot-cards {
   border: 1px solid rgba(128, 128, 128, 0.151);
   position: relative;
@@ -1124,6 +1236,6 @@ button {
   margin-bottom: 0;
 }
 .container {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin: 5rem;
+  padding: 4rem;
 }
